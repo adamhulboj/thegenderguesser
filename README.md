@@ -2,7 +2,8 @@
 Java application that can detect gender
 
 
-Trello table - https://trello.com/invite/b/nt4TUcjM/bae4cf3a50873a3dcd67123a7fb33ec5/the-gender-guesser-app
+Trello table invitation link - https://trello.com/invite/b/nt4TUcjM/bae4cf3a50873a3dcd67123a7fb33ec5/the-gender-guesser-app
+(ideally all tasks will be marked as done ;-) )
 
 I will learn Java doing this little project.
 
