@@ -4,3 +4,5 @@ we can generate this having list of personal data name surname and pesel, last d
 I can have that kind of list analizyng database in current company I will only give Name and Genger, no personal data or pesel will be leaked
 
 SQL's to Firebird database
+
+data is not perfect, there are some errors in names, this is real data from client database, someone typed this names into column name :-)
