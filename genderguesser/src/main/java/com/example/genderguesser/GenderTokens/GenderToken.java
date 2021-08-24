@@ -42,12 +42,14 @@ public class GenderToken {
 
     public void setGender(String gender) {
         if (gender.equals("M")) {
-            this.gender = TokenType.male;
+            this.gender = TokenType.MALE;
         }
-        if (gender.equals("F")) {
-            this.gender = TokenType.female;
+        else if (gender.equals("F")) {
+            this.gender = TokenType.FEMALE;
         }
-
+        else {
+            this.gender = TokenType.INCONLUSIVE;
+        }
     }
 
     @Override

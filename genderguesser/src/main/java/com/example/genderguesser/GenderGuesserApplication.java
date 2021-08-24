@@ -1,10 +1,14 @@
 package com.example.genderguesser;
 
+import com.example.genderguesser.GenderTokens.GenderToken;
+import com.example.genderguesser.GenderTokens.TokenType;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @SpringBootApplication
 @RestController
@@ -27,6 +31,20 @@ public class GenderGuesserApplication {
 	@GetMapping("/error")
 	public String err() {
 		return "somfin went wong";
+	}
+
+	@GetMapping("/gendertokens")
+	public List<GenderToken> gendertokens(@RequestParam(value = "gendertype", defaultValue = "male") String gendertype){
+
+
+
+
+		return List.of(
+				new GenderToken(
+						1L,
+						"Adam",
+						TokenType.MALE)
+		);
 	}
 
 
