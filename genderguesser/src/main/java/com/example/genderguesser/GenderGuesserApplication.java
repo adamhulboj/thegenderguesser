@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class GenderguesserApplication {
+public class GenderGuesserApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GenderguesserApplication.class, args);
+		SpringApplication.run(GenderGuesserApplication.class, args);
 	}
 
 	@GetMapping("/hello")
