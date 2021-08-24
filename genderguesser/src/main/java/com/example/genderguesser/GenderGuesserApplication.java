@@ -28,24 +28,8 @@ public class GenderGuesserApplication {
 		return "czesc";
 	}
 
-	@GetMapping("/error")
-	public String err() {
-		return "somfin went wong";
-	}
-
-	@GetMapping("/gendertokens")
-	public List<GenderToken> gendertokens(@RequestParam(value = "gendertype", defaultValue = "male") String gendertype){
 
 
-
-
-		return List.of(
-				new GenderToken(
-						1L,
-						"Adam",
-						TokenType.MALE)
-		);
-	}
 
 
 }
