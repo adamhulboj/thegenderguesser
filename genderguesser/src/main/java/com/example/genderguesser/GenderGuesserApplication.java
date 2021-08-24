@@ -1,7 +1,5 @@
 package com.example.genderguesser;
 
-import com.example.genderguesser.GenderTokens.GenderToken;
-import com.example.genderguesser.GenderTokens.TokenType;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,9 +25,5 @@ public class GenderGuesserApplication {
 	public String hello2() {
 		return "czesc";
 	}
-
-
-
-
 
 }
