@@ -1,6 +1,7 @@
 package com.example.genderguesser.GenderTokens;
 
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.List;
 @Service
 public class GenderTokenService {
 
-    public List<GenderToken>  getGenderTokens (String genderType){
+    public List<GenderToken>  getGenderTokens_static (String genderType){
 
         if (genderType.equals("male")) {
 

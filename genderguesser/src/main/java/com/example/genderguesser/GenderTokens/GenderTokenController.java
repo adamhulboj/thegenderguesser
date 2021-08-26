@@ -1,5 +1,6 @@
 package com.example.genderguesser.GenderTokens;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,7 @@ public class GenderTokenController {
 
     private final GenderTokenService genderTokenService;
 
+    @Autowired
     public GenderTokenController(GenderTokenService genderTokenService) {
         this.genderTokenService = genderTokenService;
     }
@@ -22,7 +24,7 @@ public class GenderTokenController {
     @GetMapping
     public List<GenderToken> getGenderTokens(@RequestParam(value = "gendertype", defaultValue = "male") String genderType) {
 
-        return genderTokenService.getGenderTokens(genderType);
+        return genderTokenService.getGenderTokens_static(genderType);
 
     }
 }
