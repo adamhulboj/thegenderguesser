@@ -8,9 +8,8 @@ import java.util.List;
 @Service
 public class GenderTokenService {
 
-    //( String genderType) {
-    public List<GenderToken>  getGenderTokens (){
-        String genderType = "male";
+    public List<GenderToken>  getGenderTokens (String genderType){
+
         if (genderType.equals("male")) {
 
             return List.of(

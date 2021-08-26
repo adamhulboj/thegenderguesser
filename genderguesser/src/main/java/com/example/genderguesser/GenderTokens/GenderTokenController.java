@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-//@EntityScan ("com.example.genderguesser.GenderTokens.GenderTokenService")
 @RestController
 @RequestMapping(path = "api/gendertokens")
 public class GenderTokenController {
@@ -21,17 +20,9 @@ public class GenderTokenController {
     }
 
     @GetMapping
-    public List<GenderToken> getGenderTokens(@RequestParam(value = "genderType", defaultValue = "male") String genderType) {
+    public List<GenderToken> getGenderTokens(@RequestParam(value = "gendertype", defaultValue = "male") String genderType) {
 
-//        return List.of(
-//                new GenderToken(
-//                        1L,
- //                       "Adam",
- //                       TokenType.MALE)
- //       );
-        return genderTokenService.getGenderTokens(); //(genderType);
-
-     //   return "something";
+        return genderTokenService.getGenderTokens(genderType);
 
     }
 }
