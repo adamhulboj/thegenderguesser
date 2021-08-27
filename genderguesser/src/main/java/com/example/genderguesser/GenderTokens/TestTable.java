@@ -3,32 +3,31 @@ package com.example.genderguesser.GenderTokens;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "GG.gender_tokens")
-public class GenderToken {
-    @Id
-    @SequenceGenerator(
-            name = "gendertokens_sq",
-            sequenceName = "gendertokens_sq",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "gendertokens_sq"
-    )
-    @Column( name = "ident")
+@Table
+public class TestTable {
+
+       @Id
+       @SequenceGenerator(
+               name = "gendertokens_sq",
+               sequenceName = "gendertokens_sq",
+               allocationSize = 1
+       )
+       @GeneratedValue(
+               strategy = GenerationType.SEQUENCE,
+               generator = "gendertokens_sq"
+       )
+
     private Long id;
-    @Column( name = "tokenname")
     private String gToken;
-    @Column( name = "gender")
     private TokenType gender;
 
-    public GenderToken(Long id, String gToken, TokenType gender) {
+    public TestTable(Long id, String gToken, TokenType gender) {
         this.id = id;
         this.gToken = gToken;
         this.gender = gender;
     }
 
-    public GenderToken(String gToken, TokenType gender) {
+    public TestTable(String gToken, TokenType gender) {
         this.gToken = gToken;
         this.gender = gender;
     }
@@ -71,7 +70,7 @@ public class GenderToken {
 
     @Override
     public String toString() {
-        return "GenderToken{" +
+        return "TestTable{" +
                 "id=" + id +
                 ", gToken='" + gToken + '\'' +
                 ", gender=" + gender +

@@ -21,9 +21,4 @@ public class GenderGuesserApplication {
 		return String.format("Hello %s!", name);
 	}
 
-	@GetMapping("hello2")
-	public String hello2() {
-		return "czesc";
-	}
-
 }
