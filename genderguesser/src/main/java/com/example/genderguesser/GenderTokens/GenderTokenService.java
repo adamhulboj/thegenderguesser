@@ -1,6 +1,7 @@
 package com.example.genderguesser.GenderTokens;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +9,13 @@ import java.util.List;
 
 @Service
 public class GenderTokenService {
+
+    private final GenderTokenRepository genderTokenRepository;
+
+    @Autowired
+    public GenderTokenService(GenderTokenRepository genderTokenRepository) {
+        this.genderTokenRepository = genderTokenRepository;
+    }
 
     public List<GenderToken>  getGenderTokens_static (String genderType){
 
@@ -17,23 +25,27 @@ public class GenderTokenService {
                     new GenderToken(
                             1L,
                             "Adam",
-                            TokenType.MALE)
+                            "M")
             );
         } else if (genderType.equals("female")) {
             return List.of(
                     new GenderToken(
                             2L,
                             "Anna",
-                            TokenType.FEMALE)
+                            "F")
             );
         } else {
             return List.of(
                     new GenderToken(
                             3L,
                             "Someone",
-                            TokenType.INCONLUSIVE)
+                            "")
             );
         }
+    }
+
+    public List<GenderToken>  getGenderTokens_fromDatabase(String genderType){
+        return genderTokenRepository.findAll();
     }
 
 }

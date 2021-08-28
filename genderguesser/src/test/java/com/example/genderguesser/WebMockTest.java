@@ -35,7 +35,7 @@ public class WebMockTest {
                 new GenderToken(
                         1L,
                         "It's alive",
-                        TokenType.INCONLUSIVE)));
+                        "")));
 
         this.mockMvc.perform(get("/api/gendertokens")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("ADAM")));
