@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/gendertoken")
-public class GenderTokenController {
+@RequestMapping(path = "api/gendertokens")
+public class GenderTokensController {
 
     private final GenderTokenService genderTokenService;
 
     @Autowired
-    public GenderTokenController(GenderTokenService genderTokenService) {
+    public GenderTokensController(GenderTokenService genderTokenService) {
         this.genderTokenService = genderTokenService;
     }
 
     @GetMapping
-    public List<String> getGenderToken(@RequestParam(value = "token", defaultValue = "") String token) {
-        return genderTokenService.getGenderToken_fromDBbyToken(token);
+    public List<GenderToken> getGenderTokens(@RequestParam(value = "gendertype", defaultValue = "male") String genderType) {
+        return genderTokenService.getGenderTokens_fromDatabase(genderType);
     }
 }

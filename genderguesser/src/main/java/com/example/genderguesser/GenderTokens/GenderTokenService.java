@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Locale;
 
 @Service
 public class GenderTokenService {
@@ -46,6 +47,10 @@ public class GenderTokenService {
 
     public List<GenderToken>  getGenderTokens_fromDatabase(String genderType){
         return genderTokenRepository.findAll();
+    }
+
+    public List<String> getGenderToken_fromDBbyToken(String token){
+        return genderTokenRepository.findGenderByGivenToken(token.toUpperCase());
     }
 
 }
