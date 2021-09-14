@@ -12,6 +12,17 @@ repositories {
 	mavenCentral()
 }
 
+
+bootJar{
+	//mainClass = 'com.example.genderguesser'
+	launchScript()
+}
+
+jar {
+	archiveVersion = '0.1.0'
+	archiveBaseName = 'gender_guesser'
+}
+
 dependencies {
 
 	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
@@ -24,3 +35,4 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
