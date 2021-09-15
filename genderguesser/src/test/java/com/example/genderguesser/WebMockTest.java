@@ -10,7 +10,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.example.genderguesser.GenderTokens.GenderToken;
 import com.example.genderguesser.GenderTokens.GenderTokenController;
 import com.example.genderguesser.GenderTokens.GenderTokenService;
-import com.example.genderguesser.GenderTokens.TokenType;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;

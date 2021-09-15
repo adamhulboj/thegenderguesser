@@ -1,4 +1,4 @@
-package com.example.genderguesser.GenderTokens;
+package com.example.genderguesser;
 
 import java.util.HashMap;
 import java.util.Map;

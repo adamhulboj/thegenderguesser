@@ -1,5 +1,7 @@
 package com.example.genderguesser.GenderTokens;
 
+import com.example.genderguesser.TokenType;
+
 import javax.persistence.*;
 
 @Entity
