@@ -25,7 +25,16 @@ public class GenderDetectionService {
     }
 
     public String detectGenderFromToken(String token) {
-        return "male";
+        //return "male";
+        //algorithm for detect gender having one token versionable (from file/form databse)
+
+        SearchWordinFile searchFileMale = new SearchWordinFile(token,"male_katowice.txt");
+        if (searchFileMale.search())  return "male";
+
+        SearchWordinFile searchFileFemale = new SearchWordinFile(token,"female_katowice.txt");
+        if (searchFileMale.search()) return "female";
+
+        return "inconclusive";
     }
 
     public String detectGenderFromListOfTokens(String[] tokens) {
@@ -33,7 +42,6 @@ public class GenderDetectionService {
         for (int i = 0; i < tokens.length; i++) {
            detected = detected + detectGenderFromToken(tokens[i]);
         }
-       // return "inconclusive";
         return detected;
     }
 

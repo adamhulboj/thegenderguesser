@@ -20,7 +20,6 @@ public class GenderDetectionController {
     public String detectGender(@RequestParam(name = "token", defaultValue = "") String token,
                 @RequestParam (name ="checktokens", defaultValue = "first") String checkTokens) {
         return genderDetectionService.detectGender(token, checkTokens);
-      //  return "bla bla bla "+token+" "+checkTokens;
     }
 
 }
