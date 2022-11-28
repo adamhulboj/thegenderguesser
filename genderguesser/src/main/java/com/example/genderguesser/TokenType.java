@@ -6,7 +6,7 @@ import java.util.Map;
 public enum TokenType {
     MALE ("male", "m"),
     FEMALE ("female", "f"),
-    INCONLUSIVE ("", "");
+    INCONLUSIVE ("inconclusive", "i");
 
     private static final Map<String, TokenType> BY_GENDER = new HashMap<>();
     private static final Map<String, TokenType> BY_SHORTCUT = new HashMap<>();
